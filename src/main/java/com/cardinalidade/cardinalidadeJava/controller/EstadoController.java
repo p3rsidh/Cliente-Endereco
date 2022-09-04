@@ -2,6 +2,7 @@ package com.cardinalidade.cardinalidadeJava.controller;
 
 import com.cardinalidade.cardinalidadeJava.model.Estado;
 import com.cardinalidade.cardinalidadeJava.service.EstadoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,7 @@ import java.util.Optional;
 @RestController
 public class EstadoController {
 
+    @Autowired
     private EstadoService estadoService;
 
     @GetMapping(path = "/estados")

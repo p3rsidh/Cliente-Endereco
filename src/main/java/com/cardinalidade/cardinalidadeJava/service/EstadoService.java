@@ -23,6 +23,7 @@ public class EstadoService {
     }
 
     public Estado cadastrar(Estado estado){
+        estado.getCodigo();
         return estadoRepository.save(estado);
     }
 
