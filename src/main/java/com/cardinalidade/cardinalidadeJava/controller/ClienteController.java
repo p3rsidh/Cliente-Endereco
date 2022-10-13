@@ -16,6 +16,7 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
     @GetMapping(path = "/clientes")
     public Iterable<Cliente> buscarTodosClientes(){
         return clienteService.buscarTodos();
@@ -26,6 +27,7 @@ public class ClienteController {
         return clienteService.buscarId(codigo);
     }
 
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
     @PostMapping(path = "/clientes")
     @ResponseStatus(HttpStatus.CREATED)
     public Cliente cadastrarCliente(@RequestBody Cliente cliente){
