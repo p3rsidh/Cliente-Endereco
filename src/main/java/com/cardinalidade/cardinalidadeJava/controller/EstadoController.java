@@ -15,6 +15,7 @@ public class EstadoController {
     @Autowired
     private EstadoService estadoService;
 
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
     @GetMapping(path = "/estados")
     public List<Estado> buscarTodos(){
         return estadoService.buscarTodos();
@@ -25,6 +26,7 @@ public class EstadoController {
         return estadoService.buscarPorId(codigo);
     }
 
+    @CrossOrigin(origins = "http://127.0.0.1:5500")
     @PostMapping(path = "/estados")
     @ResponseStatus(HttpStatus.CREATED)
     public Estado cadastrar(@RequestBody Estado estado){
