@@ -20,7 +20,7 @@ public class Cliente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer codigo;
 
-    @Column(name = "nome_cliente")
+    @Column(name = "nomeCliente")
     private String nomeCliente;
 
     //OneToMany Essa classe terá uma unica reclação enquanto a outra terá varias.
